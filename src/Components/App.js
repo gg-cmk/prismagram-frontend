@@ -1,7 +1,7 @@
 import React from "react";
-import { gql } from "apollo-boost";
+import gql from 'graphql-tag';
 import styled, { ThemeProvider } from "styled-components";
-import { useQuery } from "react-apollo-hooks";
+import { useQuery } from "@apollo/react-hooks";
 import { ToastContainer, toast } from "react-toastify";
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
@@ -10,7 +10,7 @@ import Footer from "./Footer";
 
 const QUERY = gql`
   {
-    isLoggedIn @client
+    isLoggedIn
   }
 `;
 
